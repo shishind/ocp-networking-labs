@@ -1,0 +1,94 @@
+═══════════════════════════════════════════════════════════════════
+  OCP NETWORKING LABS - COMMAND REFERENCE CHEAT SHEETS
+═══════════════════════════════════════════════════════════════════
+
+📚 AVAILABLE CHEAT SHEETS:
+
+1. README.md (439 lines)
+   └─ How to use these cheat sheets
+   └─ Quick navigation guide
+   └─ Learning path recommendations
+
+2. Master_Commands_QuickRef.md (632 lines) ⭐ START HERE
+   └─ Essential commands across all phases
+   └─ Quick troubleshooting workflows
+   └─ One-liner utilities
+   └─ "When things break" guide
+
+3. Phase1_Core_Networking_CheatSheet.md (761 lines)
+   Week 1-2 | Foundation
+   ├─ OSI model reference
+   ├─ IP addressing & CIDR calculations
+   ├─ DNS (dig, nslookup, systemd-resolved)
+   ├─ TCP/UDP ports (ss, nc, telnet)
+   ├─ Routing (ip route, ip addr, ARP)
+   ├─ NAT & iptables
+   ├─ systemd & journalctl
+   └─ Network troubleshooting workflows
+
+4. Phase2_Linux_Container_CheatSheet.md (875 lines)
+   Week 3-4 | Container Foundation
+   ├─ Network namespaces (ip netns)
+   ├─ veth pairs (virtual ethernet)
+   ├─ Linux bridges (brctl, ip link)
+   ├─ iptables NAT for containers
+   ├─ Connection tracking (conntrack)
+   ├─ Docker networking
+   ├─ NMState & bonding
+   ├─ tcpdump packet capture
+   └─ nsenter (namespace entry)
+
+5. Phase3_Kubernetes_CheatSheet.md (851 lines)
+   Week 5-6 | Kubernetes Core
+   ├─ kubectl/oc basics
+   ├─ Service management & debugging
+   ├─ Endpoint troubleshooting
+   ├─ DNS (CoreDNS)
+   ├─ NetworkPolicy
+   ├─ CNI (Calico, Flannel, Weave)
+   ├─ kube-proxy & IPVS
+   ├─ Pod networking
+   └─ Ingress & LoadBalancer
+
+6. Phase4_OpenShift_CheatSheet.md (1078 lines)
+   Week 7 | OpenShift Deep Dive
+   ├─ OVS (Open vSwitch) - ovs-vsctl, ovs-ofctl
+   ├─ OVN (Open Virtual Network) - ovn-nbctl, ovn-sbctl
+   ├─ The 4 traffic flows in OpenShift
+   ├─ Routes & HAProxy
+   ├─ DNS Operator
+   ├─ EgressIP configuration
+   ├─ EgressFirewall
+   └─ NetworkPolicy (OpenShift specifics)
+
+═══════════════════════════════════════════════════════════════════
+TOTAL: 4,636 lines of command reference documentation
+═══════════════════════════════════════════════════════════════════
+
+🎯 QUICK START:
+
+1. New to networking? → Start with Master_Commands_QuickRef.md
+2. Debugging an issue? → Check Master Quick Reference workflows
+3. Learning specific tech? → Go to relevant Phase cheat sheet
+4. Need help navigating? → Read README.md
+
+🆘 EMERGENCY COMMANDS:
+
+Service down:
+  oc get svc <name> && oc get ep <name>
+
+DNS broken:
+  oc get pods -n openshift-dns
+  oc exec <pod> -- nslookup kubernetes.default
+
+Route 503:
+  oc get route <name>
+  oc logs -n openshift-ingress <router-pod>
+
+Connectivity issues:
+  oc exec <pod> -- ping 8.8.8.8
+  oc get networkpolicy
+
+═══════════════════════════════════════════════════════════════════
+Location: /root/claude/ocp-networking-labs/cheat-sheets/
+═══════════════════════════════════════════════════════════════════

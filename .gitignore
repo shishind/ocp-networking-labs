@@ -1,0 +1,29 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
+*.pcap
+
+# Lab working directories (users' practice files)
+lab-work/
+practice/
+my-notes/
+
+# Environment specific
+.env
+.env.local
