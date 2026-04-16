@@ -154,12 +154,12 @@ Best regards,
 - Week 5-6: Kubernetes Networking (Services, CoreDNS, NetworkPolicy)
 - Week 7: OpenShift Networking (OVS, OVN, Routes, HAProxy)
 
-**Setup:**
+**Get started:**
 ```bash
 git clone https://github.com/shishind/ocp-networking-labs.git
 cd ocp-networking-labs
-sudo ./setup.sh
-./verify-setup.sh
+cat README.md  # Read the guide
+cd week1-2/labs && cat D1_OSI_Model.md  # Start Day 1
 ```
 
 **Recommended for:**

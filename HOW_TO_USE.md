@@ -8,16 +8,7 @@ git clone https://github.com/shishind/ocp-networking-labs.git
 cd ocp-networking-labs
 ```
 
-### Step 2: Set Up Your Environment
-```bash
-# Run the automated setup (Ubuntu/Debian/RHEL/Fedora)
-sudo ./setup.sh
-
-# Verify everything is installed
-./verify-setup.sh
-```
-
-### Step 3: Start Learning
+### Step 2: Start Learning
 ```bash
 # Read the master guide
 cat README.md
@@ -87,11 +78,11 @@ cat cheat-sheets/Master_Commands_QuickRef.md
 - 2 GB RAM, 20 GB disk
 - Internet connection
 
-**Setup handles:**
-- Installing all networking tools
-- Docker/Podman for container labs
-- kubectl and kind for Kubernetes labs
-- All required dependencies
+**Required tools:**
+- Basic networking: `ip`, `ss`, `dig`, `tcpdump`, `iptables`, `nc`
+- Container tools: `docker` or `podman`
+- Kubernetes: `kubectl`, `kind`
+- Install with your package manager (apt, dnf, yum)
 
 ---
 
@@ -103,10 +94,11 @@ cat cheat-sheets/Master_Commands_QuickRef.md
 3. Try the command with `--help` flag
 4. Open an issue on GitHub: https://github.com/shishind/ocp-networking-labs/issues
 
-**If setup fails:**
-- Run `./verify-setup.sh` to see what's missing
-- Check `QUICK_START.md` for troubleshooting
-- Open an issue with the error message
+**If you're missing tools:**
+- Install basic networking: `sudo apt install net-tools iproute2 tcpdump dnsutils` (Ubuntu/Debian)
+- Install Docker: See https://docs.docker.com/engine/install/
+- Install kubectl: See https://kubernetes.io/docs/tasks/tools/
+- Open an issue if you need help
 
 ---
 
