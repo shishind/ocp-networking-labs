@@ -1,0 +1,287 @@
+.heroBanner {
+  padding: 6rem 0 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v6h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+.heroDescription {
+  font-size: 1.3rem;
+  margin: 1.5rem 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.startingPoints {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.startingCard {
+  height: 100%;
+  margin-bottom: 2rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  position: relative;
+  overflow: hidden;
+}
+
+.startingCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--card-color, #10a37f) 0%, var(--card-color-light, #15c496) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.startingCard:hover::before {
+  transform: scaleX(1);
+}
+
+.startingCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--card-color, #10a37f);
+}
+
+.startingEmoji {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.startingCard:nth-child(1) .startingEmoji {
+  animation-delay: 0s;
+}
+
+.startingCard:nth-child(2) .startingEmoji {
+  animation-delay: 0.2s;
+}
+
+.startingCard:nth-child(3) .startingEmoji {
+  animation-delay: 0.4s;
+}
+
+.startingCard:nth-child(4) .startingEmoji {
+  animation-delay: 0.6s;
+}
+
+.topics {
+  color: var(--ifm-color-emphasis-600);
+  font-style: italic;
+  min-height: 40px;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 6px;
+}
+
+.features {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  position: relative;
+}
+
+.featureIcon {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+}
+
+.features .col:hover .featureIcon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.features h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.quickLinks {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.quickLinks .card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.quickLinks .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.quickLinks h3 {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.quickLinks pre {
+  background: #2d3748;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #68d391;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.quickLinks ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.quickLinks ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.2s ease;
+}
+
+.quickLinks ul li:last-child {
+  border-bottom: none;
+}
+
+.quickLinks ul li:hover {
+  padding-left: 0.5rem;
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.quickLinks ul li a {
+  text-decoration: none;
+  color: #667eea;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.quickLinks ul li a:hover {
+  color: #764ba2;
+}
+
+.quickLinks ul li a::before {
+  content: '→';
+  margin-right: 0.5rem;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.quickLinks ul li:hover a::before {
+  transform: translateX(4px);
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 1rem;
+  }
+
+  .startingPoints .col {
+    margin-bottom: 1.5rem;
+  }
+
+  .featureIcon {
+    font-size: 3.5rem;
+  }
+
+  .startingEmoji {
+    font-size: 3rem;
+  }
+}
+
+/* Button enhancements */
+.startingCard .button {
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.startingCard .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Card header enhancements */
+.startingCard .card__header h3 {
+  font-weight: 700;
+  color: #2c3e50;
+  margin-top: 0.5rem;
+}
+
+.startingCard .card__header p {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Add subtle animation on page load */
+.startingCard {
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.startingCard:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.startingCard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.startingCard:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.startingCard:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
